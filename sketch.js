@@ -32,13 +32,15 @@ function setup() {
 function draw() {
     background(234, 34, 24)
 
+
+
+    if (frameCount > 3000)
+        noLoop()
+
     /* debugCorner needs to be last so its z-index is highest */
     debugCorner.setText(`frameCount: ${frameCount}`, 2)
     debugCorner.setText(`fps: ${frameRate().toFixed(0)}`, 1)
     debugCorner.show()
-
-    if (frameCount > 3000)
-        noLoop()
 }
 
 
